@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { useSelector } from "react-redux";
 import { useLocation, useParams } from "react-router";
 import { DeviceContext } from "../../App";
-import Marketplace from "../../Marketplace/Marketplace";
+import Marketplace from "../Marketplace/Marketplace";
 import {
   selectIsUserError,
   selectIsUserLoaded,

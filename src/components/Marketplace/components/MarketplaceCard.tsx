@@ -4,9 +4,9 @@ import { Box } from "@material-ui/core";
 
 import { IMarketCard } from "../Marketplace";
 
-import { DeviceContext } from "../../App";
-import TooltipClickable from "../../components/TooltipClickable/TooltipClickable";
-import { theme } from "../../theme";
+import { DeviceContext } from "../../../App";
+import TooltipClickable from "../../TooltipClickable/TooltipClickable";
+import { theme } from "../../../theme";
 
 const MarketplaceCard = (card: IMarketCard) => {
   const { isMobile } = useContext(DeviceContext);

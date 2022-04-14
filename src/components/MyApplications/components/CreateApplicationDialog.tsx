@@ -10,20 +10,20 @@ import {
 } from "@material-ui/core";
 import React, { ChangeEvent, useContext } from "react";
 
-import Button from "../../styledComponents/Button";
+import Button from "../../../styledComponents/Button";
 import {
   FilledTextInput,
   FilledTextInputBase,
   FilledTextInputBaseMobile,
   FilledTextInputMobile,
   OutlinedTextInputBase,
-} from "../../styledComponents/FilledTextInput/FilledTextInput";
+} from "../../../styledComponents/FilledTextInput/FilledTextInput";
 
-import { theme } from "../../theme";
-import { DeviceContext } from "../../App";
+import { theme } from "../../../theme";
+import { DeviceContext } from "../../../App";
 
-import { IApplication } from "./MyApplications";
-import ChervonIcon from "./../ChervonIcon/ChevronIcon";
+import { IApplication } from "../MyApplications";
+import ChervonIcon from "../../ChervonIcon/ChevronIcon";
 
 interface IProps {
   onSave: (data: IApplication) => void;

@@ -8,11 +8,10 @@ import {
 } from "@material-ui/core";
 import Button from "../../../styledComponents/Button";
 import { useSnackbar } from "notistack";
-import React from "react";
+import React, { useContext } from "react";
 import { ChangeEvent } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
-import { isMobile } from "../../../device";
 import {
   fetchUserData,
   setErrorMessage,
@@ -25,12 +24,17 @@ import {
   selectUserData,
 } from "../../../store/ducks/user/selectors";
 import { UserLogginData } from "../../../store/ducks/user/store/state";
-import { FilledTextInput, FilledTextInputMobile } from "../../../styledComponents/FilledTextInput/FilledTextInput";
+import {
+  FilledTextInput,
+  FilledTextInputMobile,
+} from "../../../styledComponents/FilledTextInput/FilledTextInput";
 import { theme } from "../../../theme";
 import { eye_2, eye_1 } from "../../../UIconsts";
 import { notificationsText } from "../../MySite/notificationTexts";
+import { DeviceContext } from "../../../App";
 
 const LoginForm = ({ targetUrl }: any) => {
+  const { isMobile } = useContext(DeviceContext);
   const dispatch = useDispatch();
   const [formData, setFormData] = React.useState<UserLogginData>({
     email: "",
@@ -87,7 +91,9 @@ const LoginForm = ({ targetUrl }: any) => {
     dispatch(fetchUserData(formData));
   };
 
-  const FilledTextInputDevice = isMobile ? FilledTextInputMobile : FilledTextInput;
+  const FilledTextInputDevice = isMobile
+    ? FilledTextInputMobile
+    : FilledTextInput;
 
   return (
     <Box
@@ -173,7 +179,9 @@ const LoginForm = ({ targetUrl }: any) => {
               // onClick={loginHandler}
               disabled={isLoading}
             >
-              <Typography style={{ color: "#FFF", fontSize: isMobile ? 16 : 24 }}>
+              <Typography
+                style={{ color: "#FFF", fontSize: isMobile ? 16 : 24 }}
+              >
                 {!isLoading ? "Войти" : <CircularProgress size={20} />}
               </Typography>
             </Button>

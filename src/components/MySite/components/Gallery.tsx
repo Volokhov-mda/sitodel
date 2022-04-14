@@ -1,24 +1,23 @@
-import {
-  Box,
-  Dialog,
-  Grid,
-  LinearProgress,
-  Typography,
-} from "@material-ui/core";
-import { useSnackbar } from "notistack";
 import React, { useContext } from "react";
+import { Box, Dialog, Grid, LinearProgress } from "@material-ui/core";
+import { useSnackbar } from "notistack";
+
 import { userApi } from "../../../api/userApi";
+
 import { DeviceContext } from "../../../App";
-import { isPad } from "../../../device";
-import Button from "../../../styledComponents/Button";
+
 import { theme } from "../../../theme";
+
 import { createGallery } from "../../../UIconsts";
-import FlatButton from "../../FlatButton/FlatButton";
-import FloatingButton from "../../FloatingFlatButton/FloatingFlatButton";
-import GalleryCard from "../../Gallery/components/GalleryCard";
+
 import { emptyGallery, IGalleryModel } from "../../Gallery/Models";
+
 import { notificationsText } from "../notificationTexts";
+
 import { ReactComponent as PlusIcon } from "../icons/plus.svg";
+
+import FlatButton from "../../FlatButton/FlatButton";
+import GalleryCard from "../../Gallery/components/GalleryCard";
 import DeleteDialog from "../../MyPageContent/components/DeleteDialog";
 import GalleryDialogContent from "../../MyPageContent/components/GalleryDialogContent";
 

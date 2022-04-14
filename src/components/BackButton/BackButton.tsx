@@ -1,17 +1,25 @@
-import { Box, Typography } from "@material-ui/core";
-import React from "react";
+import { useContext } from "react";
 import { useHistory } from "react-router";
-import { isMobile } from "../../device";
-import Button from "../../styledComponents/Button";
+import { Box, Typography } from "@material-ui/core";
+
+import { DeviceContext } from "../../App";
+
 import { arrow } from "../../UIconsts";
+
+import Button from "../../styledComponents/Button";
+
 interface IProps {
   isToHomePage?: boolean;
 }
+
 const BackButton = ({ isToHomePage }: IProps) => {
+  const { isMobile } = useContext(DeviceContext);
+
   const history = useHistory();
   const goBackHandler = () => {
     isToHomePage ? history.push("/") : history.goBack();
   };
+
   return isMobile ? (
     <div />
   ) : (

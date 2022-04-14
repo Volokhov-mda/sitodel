@@ -1,23 +1,24 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { Box, Grid, LinearProgress, Typography } from "@material-ui/core";
-import lodash from "lodash";
 import Skeleton from "react-loading-skeleton";
+import { useHistory } from 'react-router';
+import { useSelector } from 'react-redux';
+import { Box, Grid, Typography } from "@material-ui/core";
+import lodash from "lodash";
 
-import { marketApi } from "../api/marketApi";
-import useFetchOnScroll from "../hooks/useFetchOnScroll";
+import { marketApi } from "../../api/marketApi";
+import useFetchOnScroll from "../../hooks/useFetchOnScroll";
+import { selectUserData } from '../../store/ducks/user/selectors';
 
-import { DeviceContext } from "../App";
+import { DeviceContext } from "../../App";
 
 import { balanceCards } from "./tools";
 
-import { theme } from "../theme";
-import { emptyMarket, noApplicationsSmall, searchMarketplace } from "../UIconsts";
+import { theme } from "../../theme";
+import { emptyMarket, noApplicationsSmall, searchMarketplace } from "../../UIconsts";
 
-import { FilledTextInput, FilledTextInputMobile } from "../styledComponents/FilledTextInput/FilledTextInput";
+import { FilledTextInput, FilledTextInputMobile } from "../../styledComponents/FilledTextInput/FilledTextInput";
+
 import MarketplaceCard from "./components/MarketplaceCard";
-import { useHistory } from 'react-router';
-import { useSelector } from 'react-redux';
-import { selectUserData } from '../store/ducks/user/selectors';
 
 
 export interface IMarketCard {

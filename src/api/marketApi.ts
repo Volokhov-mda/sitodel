@@ -1,6 +1,6 @@
 import axios from "axios";
 import { apiUrl } from "../Consts/Urls";
-import { IMarketCard } from "../Marketplace/Marketplace";
+import { IMarketCard } from "../components/Marketplace/Marketplace";
 
 export const marketApi = {
   get: (offset: string = "0", limit: string = "20", searchTerm:string, minRank: number): Promise<IMarketCard[]> =>

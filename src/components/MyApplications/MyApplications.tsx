@@ -16,7 +16,7 @@ import { theme } from "../../theme";
 
 import { DeviceContext, MySiteContext } from "../../App";
 import { mySiteApi } from "../../api/mySiteApi";
-import CreateApplicationDialog from "./CreateApplicationDialog";
+import CreateApplicationDialog from "./components/CreateApplicationDialog";
 import { arrow, noApplications } from "../../UIconsts";
 import { notificationsText } from "../MySite/notificationTexts";
 
