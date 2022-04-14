@@ -1,0 +1,8 @@
+:root {
+  --dark-color: #b12dba; /* #5862EE */
+  --main-color: #c65edb; /* #3469F6 */
+  
+  --navigation-background: #4e2957; /* 212C4D */
+
+  --filter-to-dark-color: invert(41%) sepia(74%) saturate(5936%) hue-rotate(279deg) brightness(79%) contrast(94%);;
+}

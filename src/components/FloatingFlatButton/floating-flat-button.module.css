@@ -1,0 +1,8 @@
+.button {
+    position: fixed !important;
+    bottom: 95px;
+
+    width: calc(100% - 16px * 2) !important;
+
+    z-index: 1;
+}

@@ -1,0 +1,178 @@
+#hamburger-container {
+    position: relative;
+}
+
+#hamburger-logo-hidden {
+    position: absolute;
+    width: 100%;
+}
+
+#hamburger-logo-hidden .hamburger-logo {
+    opacity: 0;
+    pointer-events: none;
+
+    transition: filter .6s;
+}
+
+.hamburger-logo {
+    width: 136px;
+
+    position: absolute;
+    left: calc(50% - 136px / 2);
+
+    filter: var(--filter-to-dark-color);
+    
+    cursor: pointer;
+
+    z-index: 43;
+}
+
+.hamburger-opened .hamburger-logo {
+    left: 18px;
+
+    filter: brightness(0) invert(1);
+
+    animation: moveLogo .6s forwards;
+}
+
+.hamburger-opened #hamburger-logo-hidden .hamburger-logo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.hamburger-closing #hamburger-logo-hidden .hamburger-logo {
+    opacity: 0;
+}
+
+.hamburger-closing .hamburger-logo {
+    animation: moveLogoBack .6s forwards;
+}
+
+#hamburger-toggle-button {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+
+    right: 0;
+    top: -10px;
+
+    padding: 10px;
+
+    color: #212C4D;
+
+    z-index: 41;
+
+    transition: .6s;
+}
+
+#hamburger-button-close {
+    opacity: 0;
+}
+
+.hamburger-opened #hamburger-button-close {
+    animation: showCloseButton .6s forwards;
+}
+
+.hamburger-closing #hamburger-button-close {
+    animation: hideCloseButton .6s forwards;
+}
+
+#hamburger-toggle-button svg {
+    position: absolute;
+    height: 44px;
+}
+
+.hamburger-background {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    opacity: 0;
+    background: var(--navigation-background);
+
+    z-index: 40;
+}
+
+.hamburger-opened .hamburger-background {
+    animation: showHamburger .6s forwards;
+}
+
+.hamburger-closing .hamburger-background {
+    animation: hideHamburger .6s forwards;
+}
+
+.hamburger-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 54px;
+}
+
+@keyframes moveLogo {
+    0% {
+        left: calc(50% - 136px / 2);
+        /* filter: var(--filter-to-dark-color); */
+    }
+
+    100% {
+        left: 18px;
+        /* filter: brightness(0) invert(1); */
+    }
+}
+
+@keyframes moveLogoBack {
+    0% {
+        left: 18px;
+        /* filter: brightness(0) invert(1); */
+    }
+    
+    100% {
+        left: calc(50% - 136px / 2);
+        /* filter: var(--filter-to-dark-color); */
+    }
+}
+
+@keyframes showHamburger {
+    0% {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hideHamburger {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@keyframes showCloseButton {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hideCloseButton {
+    0% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}

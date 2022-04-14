@@ -1,0 +1,11 @@
+.footerlogo-logo {
+  margin-top: 8px;
+  width: 158px;
+  filter: var(--filter-to-dark-color);
+}
+
+@media screen and (max-width: 500px) {
+  .footerlogo-logo {
+    width: 121px;
+  }
+}

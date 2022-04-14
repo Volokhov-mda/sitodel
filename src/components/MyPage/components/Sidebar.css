@@ -1,0 +1,16 @@
+.sidebar {
+  background-color: var(--navigation-background);
+}
+
+.sidebar-logo-container {
+  margin-top: -8px;
+  margin-bottom: 32px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sidebar-logo {
+  width: 181px;
+  height: 58px;
+  filter: var(--filter-to-dark-color);
+}

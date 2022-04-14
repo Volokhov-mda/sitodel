@@ -1,0 +1,45 @@
+.header-mobile {
+    position: fixed;
+    top: 0; 
+    
+    border-bottom: 1px solid var(--main-color);
+    
+    background: var(--main-color);
+    
+    z-index: 1000;
+}
+
+.header-mobile.showed {
+    animation: headerSlideIn .5s ease-out forwards;
+}
+
+.header-mobile.hidden {
+    animation: headerSlideOut .5s ease-out forwards;
+}
+
+.header-logo {
+    margin-top: -4px;
+    margin-right: 36px;
+    width: 136px;
+    filter: invert(1);
+}
+
+@keyframes headerSlideIn {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes headerSlideOut {
+    0% {
+        transform: translateY(0);
+    }
+    
+    100% {
+        transform: translateY(-100%);
+    }
+}

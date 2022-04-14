@@ -1,0 +1,13 @@
+.button {
+    padding: 0 !important;
+
+    min-width: 0 !important;
+    min-height: 0;
+
+    text-align: left;
+}
+
+.button:hover {
+    background: unset !important;
+    text-decoration: unset !important;
+}

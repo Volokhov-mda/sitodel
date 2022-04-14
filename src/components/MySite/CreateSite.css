@@ -1,0 +1,11 @@
+.my-site-link-input {
+  border: none;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--dark-color);
+}
+
+.my-site-link-input::placeholder {
+  color: var(--dark-color);
+}

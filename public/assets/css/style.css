@@ -1,0 +1,121 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../../fonts/Montserrat/Montserrat-Bold.ttf");
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: "Montserrat";
+    src: url("../../fonts/Montserrat/Montserrat-Medium.ttf");
+    font-weight: 500;
+  }
+  
+  @font-face {
+    font-family: "Montserrat";
+    src: url("../../fonts/Montserrat/Montserrat-Regular.ttf");
+    font-weight: normal;
+  }
+  
+  html,
+  body {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  path {
+    stroke: inherit;
+  }
+  
+  .my-site-link-input:focus {
+    border: none;
+    outline: none !important;
+  }
+  
+  .tootip-icon[data-title]:hover:after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -15px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #f8f8f8;
+    background: #333333;
+    border-radius: 2px;
+    display: block;
+    height: 16px;
+    width: max-content;
+    z-index: 99;
+    padding: 2px 6px;
+  }
+  
+  .anim {
+    animation-name: click;
+    animation-duration: 0.2s;
+    animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  }
+  
+  @keyframes click {
+    0% {
+      transform: scale(1, 1);
+    }
+  
+    50% {
+      transform: scale(0.92, 0.92);
+    }
+  
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  .MuiDropzonePreviewList-image{
+    box-shadow: none !important;
+  }
+  .social-nets__container {
+    overflow-y: auto;
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .social-nets__container > img {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  span.react-loading-skeleton {
+    border-radius: 12px;
+  }
+  
+  .market-overlay {
+    background-color: rgba(0, 0, 0, 0.61);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 14px;
+  }
+  
+  .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .site-share-href-text {
+    user-select: text;
+    background-color: #eaeef3;
+    overflow-x: scroll;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    color: #191e34;
+    max-width: calc(100% - 70px);
+  }
+  .site-share-href-text::-webkit-scrollbar {
+    height: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+  }
+  
