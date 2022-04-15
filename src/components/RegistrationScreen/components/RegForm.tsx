@@ -124,7 +124,7 @@ const RegForm = () => {
       minWidth={isMobile ? 20 : 45}
     >
       <Container>
-        {isSuccess ? (
+        {!isSuccess ? (
           <form onSubmit={registrationHandler}>
             {isMobile ? (
               <>

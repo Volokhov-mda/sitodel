@@ -1,4 +1,4 @@
-import { Box, LinearProgress } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import React, { useContext } from "react";
 import MySite from "../MySite/MySite";
 import CreateSite from "../MySite/CreateSite";
@@ -6,7 +6,6 @@ import TopBar from "./components/TopBar";
 import { IContentPageProps } from "./MyPageContent";
 import { useHistory } from "react-router";
 import { mySiteApi } from "../../api/mySiteApi";
-import Skeleton from "react-loading-skeleton";
 import { DeviceContext, MySiteContext } from "../../App";
 
 export enum EMySiteTabs {
