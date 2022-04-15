@@ -124,7 +124,7 @@ const RegForm = () => {
       minWidth={isMobile ? 20 : 45}
     >
       <Container>
-        {!isSuccess ? (
+        {isSuccess ? (
           <form onSubmit={registrationHandler}>
             {isMobile ? (
               <>
@@ -443,7 +443,7 @@ const RegForm = () => {
                     history.push("/");
                   }}
                   style={{
-                    color: "#5862EE",
+                    color: theme.palette.primary.main,
                     fontWeight: 600,
                     cursor: "pointer",
                   }}

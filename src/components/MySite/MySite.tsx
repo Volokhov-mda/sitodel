@@ -256,7 +256,7 @@ const MySite = () => {
       ) : (
         <Button
           style={{
-            backgroundColor: "#5862EE",
+            backgroundColor: theme.palette.primary.dark,
             borderRadius: 12,
             marginTop: 34,
             marginBottom: 20,
