@@ -3,6 +3,8 @@ import { useContext } from "react";
 import { DeviceContext } from "../../../App";
 import { theme } from "../../../theme";
 
+import "./styles.css";
+
 const ResetPasswordHeader = ({
   isChangePassword,
 }: {
@@ -13,9 +15,9 @@ const ResetPasswordHeader = ({
   return (
     <Box textAlign="center">
       <img
-        src="assets/darkLogo.svg"
+        src="assets/logo.svg"
         alt="Самоделкин"
-        width={isMobile ? 91 : "unset"}
+        className="login-header-logo"
       />
       <Typography
         style={{

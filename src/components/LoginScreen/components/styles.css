@@ -1,14 +1,10 @@
-.MuiCheckbox-root {
-  color: #eaeef3 !important;
-}
-
-.registration-header-logo {
+.login-header-logo {
   width: 136px;
   filter: var(--filter-to-dark-color);
 }
 
 @media screen and (max-width: 500px) {
-  .registration-header-logo {
+  .login-header-logo {
     width: 91px;
   }
 }

@@ -1,8 +1,10 @@
 import { Box, Typography } from "@material-ui/core";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { useHistory } from "react-router";
 import { DeviceContext } from "../../../App";
 import { theme } from "../../../theme";
+
+import "./styles.css";
 
 const LoginHeader = () => {
   const { isMobile } = useContext(DeviceContext);
@@ -12,9 +14,16 @@ const LoginHeader = () => {
   };
   return (
     <Box textAlign="center">
-      <img src="assets/darkLogo.svg" alt="Самоделкин" width={isMobile ? 91 : "unset"} />
+      <img
+        src="assets/logo.svg"
+        alt="Самоделкин"
+        className="login-header-logo"
+      />
       <Typography
-        style={{ fontSize: isMobile ? 24 : 40, color: theme.palette.secondary.dark }}
+        style={{
+          fontSize: isMobile ? 24 : 40,
+          color: theme.palette.secondary.dark,
+        }}
         component="h2"
       >
         ВОЙТИ В АККАУНТ

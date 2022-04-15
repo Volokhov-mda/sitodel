@@ -11,6 +11,7 @@ import ResetPasswordFrom from "./components/ResetPasswordForm";
 import ResetPasswordHeader from "./components/ResetPasswordHeader";
 import BackButton from "../BackButton/BackButton";
 import FloatingButton from "../FloatingFlatButton/FloatingFlatButton";
+import { theme } from "../../theme";
 
 const LoginScreen = ({ targetUrl }: any) => {
   const { isMobile } = useContext(DeviceContext);
@@ -48,7 +49,11 @@ const LoginScreen = ({ targetUrl }: any) => {
                 }}
               >
                 <Typography
-                  style={{ fontSize: isMobile ? 16 : 24, color: "#5862EE", fontWeight: isMobile ? 500 : 400 }}
+                  style={{
+                    fontSize: isMobile ? 16 : 24,
+                    color: theme.palette.primary.main,
+                    fontWeight: isMobile ? 500 : 400,
+                  }}
                 >
                   Не помню пароль
                 </Typography>
@@ -129,7 +134,7 @@ const LoginScreen = ({ targetUrl }: any) => {
                     <Typography
                       style={{
                         fontSize: isMobile ? 16 : 24,
-                        color: "#5862EE",
+                        color: theme.palette.primary.main,
                         fontWeight: isMobile ? 500 : 400,
                       }}
                     >
