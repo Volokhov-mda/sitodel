@@ -204,6 +204,7 @@ const Marketplace = () => {
                     borderRadius: "16px",
                     position: "relative",
                     minHeight: 330,
+                    maxHeight: 337.5,
                   }}
                 >
                   <Box marginLeft="107px">
